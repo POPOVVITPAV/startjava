@@ -2,6 +2,7 @@ package Lesson_1;
 
 public class VariablesTheme {
 
+
   public static void main(String[] args) {
 
     // 1. Создание переменных и вывод их значений
@@ -25,7 +26,7 @@ public class VariablesTheme {
       System.out.println("RAating: " + rating);
       System.out.println("DVD = " + hasDWDRam);
       System.out.println("Processor: Core " + procesor + "3");
-
+      System.out.println();
 
     // 2. Расчет стоимости товара
       System.out.println("2. Расчет стоимости товара");
@@ -52,12 +53,76 @@ public class VariablesTheme {
       System.out.println();
 
     // 4. Отображение min и max значений числовых типов данных
-     /* byte ram = 4;
-      short aaa = 1100;
-      int;
-      long;
-      float ;
-      double;*/
+
+      System.out.println("4. Отображение min и max значений числовых типов данных");
+      System.out.println();
+      //инициализируем max значения
+      byte maxByte = 127;
+      short maxShort = 	32767;
+      int maxInt = 2147483647;
+      long maxLong = 9223372036854775807l;
+      float maxFloat = 3.4E+38f;
+      double maxDouble = 1.7E+308;
+      
+      // Выводим на экран максимальные значения
+      System.out.println(maxByte);
+      System.out.println(maxShort);
+      System.out.println(maxInt);
+      System.out.println(maxLong);
+      System.out.println(maxFloat);
+      System.out.println(maxDouble);
+      System.out.println();
+      
+      // Инкрементируем значения
+       maxByte++;
+       maxShort++;
+       maxInt++;
+       maxLong++;
+       maxFloat++;
+       maxDouble++;
+
+      // Выводим на экран инкрементируемые значения
+      System.out.println(maxByte);
+      System.out.println(maxShort);
+      System.out.println(maxInt);
+      System.out.println(maxLong);
+      System.out.println(maxFloat);
+      System.out.println(maxDouble);
+      System.out.println();
+
+      //инициализируем min значения
+      byte minByte = -128;
+      short minShort = -32768;
+      int minInt = -2147483648;
+      long minlong = -9223372036854775808l;
+      float minFloat = -3.4E+38f;
+      double minDouble = -1.7E+308;
+
+      // Выводим на экран min значения
+      System.out.println(minByte);
+      System.out.println(minShort);
+      System.out.println(minInt);
+      System.out.println(minlong);
+      System.out.println(minFloat);
+      System.out.println(minDouble);
+      System.out.println();
+
+      //декрементируем min значения
+       minByte--;
+       minShort--;
+       minInt --;
+       minlong--;
+       minFloat--;
+       minDouble--;
+
+      // Выводим на экран декрементируемые значения
+      System.out.println(minByte);
+      System.out.println(minShort);
+      System.out.println(minInt);
+      System.out.println(minlong);
+      System.out.println(minFloat);
+      System.out.println(minDouble);
+      System.out.println();
 
     // 5. Перестановка значений переменных
     System.out.println("5. Перестановка значений переменных");
