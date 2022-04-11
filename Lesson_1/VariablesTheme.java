@@ -7,14 +7,24 @@ public class VariablesTheme {
     // 1. Создание переменных и вывод их значений
       System.out.println("1. Создание переменных и вывод их значений");
       System.out.println();
-      /*byte ram = 4;
-      short aaa = 1100;
-      int;
-      long;
-      float ;
-      double;
-      boolean hasDWDRom = true;
-      char;*/
+
+      byte ram = 4;
+      short systemType = 64;
+      int hdd = 250;
+      long processorFarequency = 2l;
+      float cpu = 2.00f ;
+      double rating = 7.2;
+      boolean hasDWDRam = true;
+      char procesor = 'i';
+
+      System.out.println("RAM = " + ram);
+      System.out.println("System type = " + systemType);
+      System.out.println("HDD =" + hdd);
+      System.out.println("Processor farequency = " + processorFarequency);
+      System.out.println("CPU = " + cpu);
+      System.out.println("RAating: " + rating);
+      System.out.println("DVD = " + hasDWDRam);
+      System.out.println("Processor: Core " + procesor + "3");
 
 
     // 2. Расчет стоимости товара
