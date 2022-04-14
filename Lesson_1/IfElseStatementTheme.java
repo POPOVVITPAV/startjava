@@ -33,5 +33,22 @@ public class IfElseStatementTheme {
     } else {
         System.out.println("\nЧисло являеться нулем");
     }
+
+    //6. Определение суммы вклада и начисленных банком %
+    System.out.println("\n6. Определение суммы вклада и начисленных банком %");
+    double depositAmount = 300_000;
+    double accruedInterest;
+    double totalAmount;
+    if (depositAmount < 100_000) {
+         accruedInterest = depositAmount * 0.05;
+         totalAmount = depositAmount + accruedInterest; 
+    } else if (100_000 <= depositAmount && depositAmount <= 300_000) {
+         accruedInterest = depositAmount * 0.07;
+         totalAmount = depositAmount + accruedInterest; 
+    } else {
+         accruedInterest = depositAmount * 0.1;
+         totalAmount = depositAmount + accruedInterest; 
+    }
+    System.out.println("\nСумма вклада = " + depositAmount + ", начисленный процент = " + accruedInterest + ", итоговая сумма с процентами = " + totalAmount);
   } 
 }
