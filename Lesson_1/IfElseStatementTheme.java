@@ -5,6 +5,34 @@ public class IfElseStatementTheme {
   public static void main(String[] args) {
     //1. Перевод псевдокода на язык Java
     System.out.println("\n1. Перевод псевдокода на язык Java\n");
+    int age = 21;
+    if (age > 20) {
+        System.out.println("Можно бахнуть пивка");
+    } else {
+        System.out.println("Ты ещё маленький");
+    }
+
+    boolean genderMale = true;
+    if (!genderMale) {
+        System.out.println("Детям мороженое бабе цветы");
+    }
+
+    double height = 1.70;
+    if (height < 1.80) {
+        System.out.println("Программист");
+    } else {
+        System.out.println("Баскетболист");
+    }
+
+    char firstLetterName = "Мария".charAt(0);
+    if (firstLetterName == 'М') {
+        System.out.println("Русское Имя");
+    } else if (firstLetterName == 'I') {
+        System.out.println("Английское имя");
+    } else {
+        System.out.println("Неизвестно");
+    }
+
 
     //2. Поиск максимального и минимального числа
     System.out.println("\n2. Поиск максимального и минимального числа");
