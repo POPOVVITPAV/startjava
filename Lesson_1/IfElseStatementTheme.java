@@ -128,5 +128,42 @@ public class IfElseStatementTheme {
 
       // 9. Определение существования треугольника
       System.out.println("\n9. Определение существования треугольника"); 
+      double a = 3;
+      double b = 4;
+      double c = 5;
+      if (a * a + b * b == c * c || b * b + c * c == a * a || c * c + a * a == b * b) {
+          System.out.println("Треугольник существует с такими длиннами сторон");
+          if (a * a + b * b == c * c ) {
+              System.out.println("Катет a = " + a + " Катет b = " + b + " Гепотенуза с = " + c);
+              System.out.println("Площадь треугольника = " + (a + b) / 2);
+          } else if (b * b + c * c == a * a) {
+              System.out.println("Катет b = " + b + " Катет c = " + c + " Гепотенуза a = " + a);
+              System.out.println("Площадь треугольника = " + (b + c) / 2);
+          } else if (c * c + a * a == b * b) {
+              System.out.println("Катет c = " + c + " Катет a = " + a + " Гепотенуза b = " + b);
+              System.out.println("Площадь треугольника = " + (c + a) / 2);
+        } 
+      } else {
+        System.out.println("Треугольник не существует с такими длиннами сторон");
+      }
+
+      // 10. Подсчетколичества банкнот 
+      System.out.println("\n10. Подсчетколичества банкнот"); 
+      int srcAmount = 567;
+      int denominationBanknote = 50;
+      if (denominationBanknote == 1) {
+          int denominationBanknote_1 = srcAmount / denominationBanknote;
+          System.out.println("Количество банкнот номиналом 1 = " + denominationBanknote_1);
+      } else if (denominationBanknote == 10) {
+          int denominationBanknote_10 = srcAmount / denominationBanknote;
+          int unitsSum =  srcAmount - denominationBanknote_10 * denominationBanknote;
+          System.out.println("Количество банкнот номиналом 10 = " +  denominationBanknote_10 + " \nи количество банкнот номиналом 1 = " + unitsSum);
+      }else if (denominationBanknote == 50) {
+          int denominationBanknote_50 = srcAmount / denominationBanknote;
+          int denominationBanknote_10 =  (srcAmount - denominationBanknote_50) / 10;
+          int unitsSum =  (srcAmount - denominationBanknote_50) % 10;
+          System.out.println("Количество банкнот номиналом 50 = " +  denominationBanknote_50 + "\nКоличество банкнот номиналом 10 = " +  denominationBanknote_10 + " \nи количество банкнот номиналом 1 = " + unitsSum);
+     }
+
   } 
 }
