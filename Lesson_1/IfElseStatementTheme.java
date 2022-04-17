@@ -54,13 +54,26 @@ public class IfElseStatementTheme {
             System.out.println("\nЧисло являеться нечетным");
         }
         if (someNumber < 0 ) {
-          System.out.println("Число являеться отрицательным");
+            System.out.println("Число являеться отрицательным");
         } else {
-          System.out.println("Число являеться положительным");
+            System.out.println("Число являеться положительным");
         }
     } else {
         System.out.println("\nЧисло являеться нулем");
     }
+
+    //4. Поиск общей цифры в числах
+    System.out.println("\n4. Поиск общей цифры в числах");
+    int firstVariable = 137;
+    int secondVariable = 439;
+    if (firstVariable / 100 == secondVariable / 100) {
+        System.out.println("Сони равны " + firstVariable / 100);
+    } else if (firstVariable / 10 % 10 == secondVariable / 10 % 10) {
+        System.out.println("Десятки равны " + firstVariable / 10 % 10);
+    } else if (firstVariable % 10 == secondVariable % 10) {
+        System.out.println("Единицы равны " + firstVariable % 10);
+    }
+    
 
     //6. Определение суммы вклада и начисленных банком %
     System.out.println("\n6. Определение суммы вклада и начисленных банком %");
@@ -78,5 +91,42 @@ public class IfElseStatementTheme {
          totalAmount = depositAmount + accruedInterest; 
     }
     System.out.println("\nСумма вклада = " + depositAmount + ", начисленный процент = " + accruedInterest + ", итоговая сумма с процентами = " + totalAmount);
+
+    //7. Определить оценки по предметам 
+  /*  System.out.println("\n7. Определить оценки по предметам ");
+    int balls = 10;
+    int assessment = 10;
+    int programmingBalls = 59;
+    int historyBalls = 91;
+    if (balls <= 60) {
+        assessment = 2;
+    } else if (balls > 60) {
+        assessment = 3;
+    } else if (balls > 73) {
+        assessment = 4;
+    } else if (balls > 91) {
+        assessment = 5;
+    }
+    System.out.println(assessment);
+    System.out.println("Средний балл = " + (programmingBalls + historyBalls)/2);
+    System.out.println("Средний балл = " + (programmingBalls + historyBalls)/2);
+    System.out.println("Средний процент по предметам = " + (programmingBalls + historyBalls)/2);*/
+    
+    //8. Расчет прибыли (убытка)
+    System.out.println("\n8. Расчет прибыли (убытка)");
+    double rentOfPremises = 5_000;
+    double priceSoldGoods = 15_000;
+    double costPrice = 9_000;
+    double financialResults = (priceSoldGoods - rentOfPremises - costPrice) * 12;
+    if (financialResults > 0) {
+        System.out.println(" + " + financialResults);
+    } else {
+        System.out.println(" - " + financialResults);
+    }
+
+    //Задание со*
+
+      // 9. Определение существования треугольника
+      System.out.println("\n9. Определение существования треугольника"); 
   } 
 }
