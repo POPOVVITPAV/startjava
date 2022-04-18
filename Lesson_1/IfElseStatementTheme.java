@@ -93,24 +93,32 @@ public class IfElseStatementTheme {
     System.out.println("\nСумма вклада = " + depositAmount + ", начисленный процент = " + accruedInterest + ", итоговая сумма с процентами = " + totalAmount);
 
     //7. Определить оценки по предметам 
-  /*  System.out.println("\n7. Определить оценки по предметам ");
-    int balls = 10;
-    int assessment = 10;
+    System.out.println("\n7. Определить оценки по предметам ");
     int programmingBalls = 59;
     int historyBalls = 91;
-    if (balls <= 60) {
-        assessment = 2;
-    } else if (balls > 60) {
-        assessment = 3;
-    } else if (balls > 73) {
-        assessment = 4;
-    } else if (balls > 91) {
-        assessment = 5;
+    int programmingAssessment = 2;
+    int historyAssessment = 2;
+    if (programmingBalls <= 60) {
+        programmingAssessment = 2;
+    } else if (programmingBalls > 60) {
+        programmingAssessment = 3;
+    } else if (programmingBalls > 73) {
+        programmingAssessment = 4;
+    } else if (programmingBalls > 91) {
+        programmingAssessment = 5;
     }
-    System.out.println(assessment);
-    System.out.println("Средний балл = " + (programmingBalls + historyBalls)/2);
-    System.out.println("Средний балл = " + (programmingBalls + historyBalls)/2);
-    System.out.println("Средний процент по предметам = " + (programmingBalls + historyBalls)/2);*/
+    if (historyBalls <= 60) {
+        historyAssessment = 2;
+    } else if (historyBalls > 60) {
+        historyAssessment = 3;
+    } else if (historyBalls > 73) {
+        historyAssessment = 4;
+    } else if (historyBalls > 91) {
+        historyAssessment = 5;
+    }
+    System.out.println("История - " + historyAssessment +"\nПрограммирование - " + programmingAssessment);
+    System.out.println("Средний балл = " + (historyAssessment + programmingAssessment) / 2);
+    System.out.println("Средний балл = " + (programmingBalls + historyBalls) / 2);
     
     //8. Расчет прибыли (убытка)
     System.out.println("\n8. Расчет прибыли (убытка)");
