@@ -73,6 +73,9 @@ public class IfElseStatementTheme {
     } else if (firstVariable % 10 == secondVariable % 10) {
         System.out.println("Единицы равны " + firstVariable % 10);
     }
+
+    //5. Определение буквы, числа или символа по их коду
+    System.out.println("\n5. Определение буквы, числа или символа по их коду");
     
 
     //6. Определение суммы вклада и начисленных банком %
