@@ -76,6 +76,8 @@ public class IfElseStatementTheme {
 
     //5. Определение буквы, числа или символа по их коду
     System.out.println("\n5. Определение буквы, числа или символа по их коду");
+    char uniCode = '\u005A';
+    System.out.println(uniCode); 
     
 
     //6. Определение суммы вклада и начисленных банком %
@@ -97,8 +99,8 @@ public class IfElseStatementTheme {
 
     //7. Определить оценки по предметам 
     System.out.println("\n7. Определить оценки по предметам ");
-    int programmingBalls = 59;
-    int historyBalls = 91;
+    int programmingBalls = 91;
+    int historyBalls = 56;
     int programmingAssessment = 2;
     int historyAssessment = 2;
     if (programmingBalls <= 60) {
