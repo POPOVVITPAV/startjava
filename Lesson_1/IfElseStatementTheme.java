@@ -77,9 +77,16 @@ public class IfElseStatementTheme {
     //5. Определение буквы, числа или символа по их коду
     System.out.println("\n5. Определение буквы, числа или символа по их коду");
     char uniCode = '\u005A';
-    System.out.println(uniCode); 
-    
-
+    if (uniCode >= 'a' && uniCode <= 'z') {
+        System.out.println("это маленькая буква");
+    } else if (uniCode >= 'A' && uniCode <= 'Z') {
+        System.out.println("это большая буква");
+    } else if (uniCode >= '0' && uniCode <= '9') {
+        System.out.println("это число");
+    } else {
+        System.out.println("это не буква и не число");
+    }
+   
     //6. Определение суммы вклада и начисленных банком %
     System.out.println("\n6. Определение суммы вклада и начисленных банком %");
     double depositAmount = 300_000;
