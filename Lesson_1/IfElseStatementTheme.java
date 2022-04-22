@@ -166,6 +166,11 @@ public class IfElseStatementTheme {
       } else {
         System.out.println("Треугольник не существует с такими длиннами сторон");
       }
+      System.out.println("\\");
+      System.out.println("|\\");
+      System.out.println("| \\");
+      System.out.println("|  \\");
+      System.out.println("|___\\");
 
       // 10. Подсчетколичества банкнот 
       System.out.println("\n10. Подсчетколичества банкнот"); 
@@ -184,6 +189,5 @@ public class IfElseStatementTheme {
           int unitsSum =  (srcAmount - denominationBanknote_50) % 10;
           System.out.println("Количество банкнот номиналом 50 = " +  denominationBanknote_50 + "\nКоличество банкнот номиналом 10 = " +  denominationBanknote_10 + " \nи количество банкнот номиналом 1 = " + unitsSum);
      }
-
   } 
 }
