@@ -2,7 +2,7 @@ package Lesson_1;
 
 public class VariablesTheme {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
       // 1. Создание переменных и вывод их значений
       System.out.println("\n1. Создание переменных и вывод их значений\n");
 
@@ -57,13 +57,19 @@ public class VariablesTheme {
       System.out.println(maxByte);
       System.out.println(maxShort);
       System.out.println(maxInt);
-      System.out.println(maxLong+"\n");
+      System.out.println(maxLong + "\n");
 
       // Выводим на экран инкрементируемые значения
       System.out.println(++maxByte);
       System.out.println(++maxShort);
       System.out.println(++maxInt);
       System.out.println(++maxLong);
+
+      // Выводим на экран декрементируемые значения
+      System.out.println(--maxByte);
+      System.out.println(--maxShort);
+      System.out.println(--maxInt);
+      System.out.println(--maxLong);
 
       // 5. Перестановка значений переменных
       System.out.println("\n5. Перестановка значений переменных");
@@ -97,7 +103,6 @@ public class VariablesTheme {
 
       // 7. Произведение и сумма цифр числа
       System.out.println("\n7. Произведение и сумма цифр числа");
-
       int srcNum = 345;
       int num1 = srcNum / 100;
       int num2 = srcNum / 10 % 10;
@@ -113,7 +118,6 @@ public class VariablesTheme {
 
       // 8. Вывод на консоль ASCII-арт Дюка
       System.out.println("\n8. Вывод на консоль ASCII-арт Дюка\n");
-
       char slesh = '/';
       char backlash = '\\';
       char space = ' ';
@@ -129,7 +133,6 @@ public class VariablesTheme {
 
       //9. Отображение количества сотен, десятков и единиц числа
       System.out.println("\n9.Отображение количества сотен, десятков и единиц числа");
-
       int numSrc = 123;
       int hundreds = numSrc / 100;
       int dozens = numSrc / 10 % 10;
@@ -148,6 +151,6 @@ public class VariablesTheme {
       int minutes = totalSec / 60 % 60;
       int seconds = totalSec % 60;
       
-      System.out.println(hours+":"+ minutes +":"+ seconds);
+      System.out.println(hours + ":" + minutes + ":" + seconds);
   }
 }
