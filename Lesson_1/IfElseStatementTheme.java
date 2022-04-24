@@ -172,21 +172,22 @@ public class IfElseStatementTheme {
         System.out.println("|  \\");
         System.out.println("|___\\");
 
-        // 10. Подсчетколичества банкнот 
-        System.out.println("\n10. Подсчетколичества банкнот"); 
+        // 10. Подсчет количества банкнот 
+        System.out.println("\n10. Подсчет количества банкнот"); 
         int srcAmount = 567;
-        int denominationBanknote = 50;
+        var denominationBanknote = 50;
         if (denominationBanknote == 1) {
             int denominationBanknote_1 = srcAmount / denominationBanknote;
             System.out.println("Количество банкнот номиналом 1 = " + denominationBanknote_1);
         } else if (denominationBanknote == 10) {
             int denominationBanknote_10 = srcAmount / denominationBanknote;
-            int unitsSum =  srcAmount - denominationBanknote_10 * denominationBanknote;
+            int unitsSum =  srcAmount % 10;
             System.out.println("Количество банкнот номиналом 10 = " +  denominationBanknote_10 + " \nи количество банкнот номиналом 1 = " + unitsSum);
         }else if (denominationBanknote == 50) {
             int denominationBanknote_50 = srcAmount / denominationBanknote;
-            int denominationBanknote_10 =  (srcAmount - denominationBanknote_50) / 10;
-            int unitsSum =  (srcAmount - denominationBanknote_50) % 10;
+            srcAmount %= denominationBanknote;
+            int denominationBanknote_10 = srcAmount / 10;
+            int unitsSum = srcAmount % 10;
             System.out.println("Количество банкнот номиналом 50 = " +  denominationBanknote_50 + "\nКоличество банкнот номиналом 10 = " +  denominationBanknote_10 + " \nи количество банкнот номиналом 1 = " + unitsSum);
         }
     } 
