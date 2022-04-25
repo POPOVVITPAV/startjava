@@ -33,7 +33,6 @@ public class IfElseStatementTheme {
             System.out.println("Неизвестно");
         }
 
-
         //2. Поиск максимального и минимального числа
         System.out.println("\n2. Поиск максимального и минимального числа");
         int srcNum1 = 235;
@@ -47,32 +46,32 @@ public class IfElseStatementTheme {
         //3. Работа с числом
         System.out.println("\n3. Работа с числом");
         int num = 5;
-        String text = "Число является ";
+        System.out.print("Число является ");
         if (num != 0) {
             if (num % 2 == 0) {
-                System.out.println("\n" + text + "четным");
+                System.out.println("четным");
             } else {
-                System.out.println("\n" + text + "нечетным");
+                System.out.println("нечетным");
             }
-            if (num < 0 ) {
-                System.out.println(text + "отрицательным");
+            if (num < 0) {
+                System.out.println("отрицательным");
             } else {
-                System.out.println(text + "положительным");
+                System.out.println("положительным");
             }
         } else {
-            System.out.println("\n" + text + "нулем");
+            System.out.println("нулем");
         }
 
         //4. Поиск общей цифры в числах
         System.out.println("\n4. Поиск общей цифры в числах");
-        int num1 = 137;
-        int secondVariable = 439;
-        if (num1 / 100 == secondVariable / 100) {
-            System.out.println("Сони равны " + num1 / 100);
-        } else if (num1 / 10 % 10 == secondVariable / 10 % 10) {
-            System.out.println("Десятки равны " + num1 / 10 % 10);
-        } else if (num1 % 10 == secondVariable % 10) {
-            System.out.println("Единицы равны " + num1 % 10);
+        srcNum1 = 137;
+        srcNum2 = 439;
+        if (srcNum1 / 100 == srcNum2 / 100) {
+            System.out.println("Сони равны " + srcNum1 / 100);
+        } else if (srcNum1 / 10 % 10 == srcNum2 / 10 % 10) {
+            System.out.println("Десятки равны " + srcNum1 / 10 % 10);
+        } else if (srcNum1 % 10 == srcNum2 % 10) {
+            System.out.println("Единицы равны " + srcNum1 % 10);
         }
 
         //5. Определение буквы, числа или символа по их коду
