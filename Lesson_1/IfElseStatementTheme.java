@@ -169,7 +169,7 @@ public class IfElseStatementTheme {
                 cathet2 = a;
                 hypotenuse = b;
             } 
-            System.out.println("Катет c = " + cathet1 + " Катет a = " + cathet2 + " Гипотенуза b = " + hypotenuse);
+            System.out.println("Катет 1 = " + cathet1 + " Катет 2 = " + cathet2 + " Гипотенуза = " + hypotenuse);
             System.out.println("Площадь треугольника = " + (cathet1 + cathet2) / 2);
         } else {
             System.out.println("Треугольник не существует с такими длинами сторон");
