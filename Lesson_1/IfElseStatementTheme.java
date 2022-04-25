@@ -78,11 +78,11 @@ public class IfElseStatementTheme {
         System.out.println("\n5. Определение буквы, числа или символа по их коду");
         char symbol = '\u005A';
         if (symbol >= 'a' && symbol <= 'z') {
-            System.out.println("это маленькая буква");
+            System.out.println("это маленькая буква " + symbol);
         } else if (symbol >= 'A' && symbol <= 'Z') {
-            System.out.println("это большая буква");
+            System.out.println("это большая буква " + symbol);
         } else if (symbol >= '0' && symbol <= '9') {
-            System.out.println("это число");
+            System.out.println("это число " + symbol);
         } else {
             System.out.println("это не буква и не число");
         }
@@ -139,7 +139,7 @@ public class IfElseStatementTheme {
         double costPrice = 9_000;
         double financialResults = (priceSoldGoods - rentOfPremises - costPrice) * 12;
         if (financialResults < 0) {
-            System.out.println("прибыль за год: -" + financialResults);
+            System.out.println("прибыль за год: " + financialResults);
         } else {
             System.out.println("прибыль за год: +" + financialResults);
         }
@@ -153,16 +153,24 @@ public class IfElseStatementTheme {
         double c = 5;
         if (a * a + b * b == c * c || b * b + c * c == a * a || c * c + a * a == b * b) {
             System.out.println("Треугольник существует с такими длинами сторон");
+            double cathet1 = 1;
+            double cathet2 = 1;
+            double hypotenuse = 1;
             if (a * a + b * b == c * c ) {
-                System.out.println("Катет a = " + a + " Катет b = " + b + " Гепотенуза с = " + c);
-                System.out.println("Площадь треугольника = " + (a + b) / 2);
+                cathet1 = a;
+                cathet2 = b;
+                hypotenuse = c;
             } else if (b * b + c * c == a * a) {
-                System.out.println("Катет b = " + b + " Катет c = " + c + " Гепотенуза a = " + a);
-                System.out.println("Площадь треугольника = " + (b + c) / 2);
+                cathet1 = b;
+                cathet2 = c;
+                hypotenuse = a;
             } else if (c * c + a * a == b * b) {
-                System.out.println("Катет c = " + c + " Катет a = " + a + " Гепотенуза b = " + b);
-                System.out.println("Площадь треугольника = " + (c + a) / 2);
+                cathet1 = c;
+                cathet2 = a;
+                hypotenuse = b;
             } 
+            System.out.println("Катет c = " + cathet1 + " Катет a = " + cathet2 + " Гипотенуза b = " + hypotenuse);
+            System.out.println("Площадь треугольника = " + (cathet1 + cathet2) / 2);
         } else {
             System.out.println("Треугольник не существует с такими длинами сторон");
         }
@@ -176,8 +184,8 @@ public class IfElseStatementTheme {
         int srcAmount = 567;
         var denominationBanknote = 50;
         if (denominationBanknote == 1) {
-            int denominationBanknote_1 = srcAmount / denominationBanknote;
-            System.out.println("Количество банкнот номиналом 1 = " + denominationBanknote_1);
+            int unitsSum = srcAmount / denominationBanknote;
+            System.out.println("Количество банкнот номиналом 1 = " + unitsSum);
         } else if (denominationBanknote == 10) {
             int denominationBanknote_10 = srcAmount / denominationBanknote;
             int unitsSum =  srcAmount % 10;
