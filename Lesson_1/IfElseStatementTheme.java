@@ -44,7 +44,7 @@ public class IfElseStatementTheme {
         }
 
         //3. Работа с числом
-        System.out.println("\n3. Работа с числом");
+        System.out.println("\n3. Работа с числом\n");
         int num = 5;
         System.out.print("Число является ");
         if (num != 0) {
@@ -63,7 +63,7 @@ public class IfElseStatementTheme {
         }
 
         //4. Поиск общей цифры в числах
-        System.out.println("\n4. Поиск общей цифры в числах");
+        System.out.println("\n4. Поиск общей цифры в числах\n");
         srcNum1 = 137;
         srcNum2 = 439;
         if (srcNum1 / 100 == srcNum2 / 100) {
@@ -75,7 +75,7 @@ public class IfElseStatementTheme {
         }
 
         //5. Определение буквы, числа или символа по их коду
-        System.out.println("\n5. Определение буквы, числа или символа по их коду");
+        System.out.println("\n5. Определение буквы, числа или символа по их коду\n");
         char symbol = '\u005A';
         if (symbol >= 'a' && symbol <= 'z') {
             System.out.println("это маленькая буква " + symbol);
@@ -105,7 +105,7 @@ public class IfElseStatementTheme {
         System.out.println("\nСумма вклада = " + depositAmount + ", начисленный процент = " + accruedInterest + ", итоговая сумма с процентами = " + totalAmount);
 
         //7. Определить оценки по предметам 
-        System.out.println("\n7. Определить оценки по предметам ");
+        System.out.println("\n7. Определить оценки по предметам\n");
         int programmingBalls = 91;
         int historyBalls = 56;
         int programmingAssessment = 2;
@@ -133,7 +133,7 @@ public class IfElseStatementTheme {
         System.out.println("Средний балл = " + (programmingBalls + historyBalls) / 2);
         
         //8. Расчет прибыли (убытка)
-        System.out.println("\n8. Расчет прибыли (убытка)");
+        System.out.println("\n8. Расчет прибыли (убытка)\n");
         double rentOfPremises = 5_000;
         double priceSoldGoods = 15_000;
         double costPrice = 9_000;
@@ -147,7 +147,7 @@ public class IfElseStatementTheme {
         //Задание со*
 
         // 9. Определение существования треугольника
-        System.out.println("\n9. Определение существования треугольника"); 
+        System.out.println("\n9. Определение существования треугольника\n"); 
         double a = 3;
         double b = 4;
         double c = 5;
@@ -180,22 +180,26 @@ public class IfElseStatementTheme {
         System.out.println("|___\\");
 
         // 10. Подсчет количества банкнот 
-        System.out.println("\n10. Подсчет количества банкнот"); 
+        System.out.println("\n10. Подсчет количества банкнот\n"); 
         int srcAmount = 567;
-        var denominationBanknote = 50;
+        int denominationBanknote = 50;
+        int denominationBanknote_50 = 1;
+        int denominationBanknote_10 = 1;
+        int unitsSum = 1;
+        System.out.println("Деньги " + srcAmount + " состоят из");
         if (denominationBanknote == 1) {
-            int unitsSum = srcAmount / denominationBanknote;
-            System.out.println("Количество банкнот номиналом 1 = " + unitsSum);
+            unitsSum = srcAmount / denominationBanknote;
         } else if (denominationBanknote == 10) {
-            int denominationBanknote_10 = srcAmount / denominationBanknote;
-            int unitsSum =  srcAmount % 10;
-            System.out.println("Количество банкнот номиналом 10 = " +  denominationBanknote_10 + " \nи количество банкнот номиналом 1 = " + unitsSum);
+            denominationBanknote_10 = srcAmount / denominationBanknote;
+            unitsSum =  srcAmount % 10;
         }else if (denominationBanknote == 50) {
-            int denominationBanknote_50 = srcAmount / denominationBanknote;
+            denominationBanknote_50 = srcAmount / denominationBanknote;
             srcAmount %= denominationBanknote;
-            int denominationBanknote_10 = srcAmount / 10;
-            int unitsSum = srcAmount % 10;
-            System.out.println("Количество банкнот номиналом 50 = " +  denominationBanknote_50 + "\nКоличество банкнот номиналом 10 = " +  denominationBanknote_10 + " \nи количество банкнот номиналом 1 = " + unitsSum);
+            denominationBanknote_10 = srcAmount / 10;
+            unitsSum = srcAmount % 10;
         }
+        System.out.println("Количество банкнот номиналом 50 = " + denominationBanknote_50);
+        System.out.println("Количество банкнот номиналом 10 = " +  denominationBanknote_10);
+        System.out.println("Количество банкнот номиналом 1 = " + unitsSum);
     } 
 }
