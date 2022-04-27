@@ -7,6 +7,7 @@ public class CyclesTheme {
         do {
 
         } while (a <= 21);
-    }
-  
+
+        //2. Вывод чисел между max и min
+    } 
 }
