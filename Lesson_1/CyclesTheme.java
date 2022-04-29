@@ -19,6 +19,16 @@ public class CyclesTheme {
             }
             System.out.println();
         }
+        int i = 0;
+        int j = 0;
+        while (i < 5) {
+            while (j < 5) {
+                System.out.print("*");
+                j++;
+                }
+            System.out.println();
+            i++;    
+        }
         //7. Отображение ASCII-символов
         //8. Проверка, является ли число палиндромом
         //9. Определение, является ли число счастливым
