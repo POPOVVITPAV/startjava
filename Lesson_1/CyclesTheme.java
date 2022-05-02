@@ -4,9 +4,20 @@ public class CyclesTheme {
 
     public static void main(String[] args) {
         //1. Подсчет суммы четных и нечетных чисел
-       /* do {
-
-        } while (a <= 21);*/
+        int oddNumberSum = 0;
+        int evenNumberSum = 0;
+        int currentValue = -10;
+        int limit = 21; 
+        do {
+            if (currentValue % 2 == 0) {
+                oddNumberSum += currentValue;
+            } else {
+                evenNumberSum += currentValue;
+            }
+            currentValue++;
+        } while (currentValue <= limit);
+        System.out.println("Сумма четных чисел = " + oddNumberSum);
+        System.out.println("Сумма нечетных чисел = " + evenNumberSum);
 
         //2. Вывод чисел между max и min
         //3. Вывод реверсивного числа и суммы его цифр
@@ -20,13 +31,13 @@ public class CyclesTheme {
             System.out.println();
         }
         int i = 0;
-        int j = 0;
+        int j = 5;
         while (i < 5) {
-            while (j < 5) {
+            while (j < 0) {
                 System.out.print("*");
-                j++;
                 }
-            System.out.println();
+                 j--;
+            System.out.print("*");
             i++;    
         }
         //7. Отображение ASCII-символов
