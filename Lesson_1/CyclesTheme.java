@@ -20,6 +20,34 @@ public class CyclesTheme {
         System.out.println("Сумма нечетных чисел = " + evenNumberSum);
 
         //2. Вывод чисел между max и min
+        int num1 = 10;
+        int num2 = 5;
+        int num3 = -1;
+        int max = 0;
+        int min = 0;
+        if (num1 > num2 & num2 > num3) {
+            max = num1;
+            min = num3;
+        } else if (num1 < num2 & num2 < num3) {
+            max = num3;
+            min = num1;
+        } else if (num2 > num3 & num3 > num1) {
+            max = num2;
+            min = num1;
+        } else if (num2 < num3 & num3 < num1) {
+            max = num2;
+            min = num1;    
+        } else if (num3 > num1 & num1 > num2) {
+            max = num3;
+            min = num2;
+        }else if (num3 < num1 & num1 < num2) {
+            max = num3;
+            min = num2;    
+        }
+        for (int i = min + 1; i < max; i++) {
+            System.out.print(i + ",");
+        }
+        
         //3. Вывод реверсивного числа и суммы его цифр
         //4. Вывод чисел на консоль в несколько строк
         //5. Проверка количества единиц на четность
