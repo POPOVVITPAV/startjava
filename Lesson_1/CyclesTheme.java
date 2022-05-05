@@ -49,30 +49,62 @@ public class CyclesTheme {
         }
         
         //3. Вывод реверсивного числа и суммы его цифр
+        int num = 1234;
+        int reversed = 0;
+        int sum = 0;
+        while(num != 0) {
+            int digit = num % 10;
+            reversed = reversed * 10 + digit;
+            num /= 10;
+            sum += digit;
+        }
+        System.out.println("Число в обратном порядке: " + reversed + ", сумма его цифр " + sum);
+        
         //4. Вывод чисел на консоль в несколько строк
+
         //5. Проверка количества единиц на четность
+        int num5 = 3141591;
+        int count = 0;
+        String word;
+        while (num5 !=0) {
+            int numOne = num5 % 10;
+            if (numOne == 1) {
+                count++;
+            }
+            num5 /= 10;
+        } if (count % 2 == 0) {
+            word = "Четным";
+        } else {
+            word = "Нечетным";
+        }
+        System.out.println("Количество еденийц: " + count + ", является " + word);
+
         //6. Отображение фигур в консоли
-        for(int i = 0; i < 5; i++){
+       for(int i = 0; i < 5; i++){
             for(int j = 0; j < 10; j++){
                 System.out.print("*");
             }
             System.out.println();
         }
-        int i = 0;
-        int j = 5;
-        while (i < 5) {
-            while (j < 0) {
-                System.out.print("*");
-                }
-                 j--;
-            System.out.print("*");
-            i++;    
-        }
+        int a = 5;
+        while(a > 0){
+            int b = 0;
+            while (b < a){
+                System.out.print("#");
+                b++;
+            }
+            System.out.println();
+            a--;
+        }  
         //7. Отображение ASCII-символов
         //8. Проверка, является ли число палиндромом
         //9. Определение, является ли число счастливым
         //10. Вывод таблицы умножения Пифагора
-
-
+        for (int i = 2; i <= 9; i++) {
+            for (int j = 2; j <= 9; j++) {
+                System.out.printf("%4d", (i * j));
+            }
+            System.out.println();
+        }
     } 
 }
