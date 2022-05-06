@@ -61,7 +61,14 @@ public class CyclesTheme {
         System.out.println("Число в обратном порядке: " + reversed + ", сумма его цифр " + sum);
         
         //4. Вывод чисел на консоль в несколько строк
-
+        for (int j = 1; j <= 24; j += 2) {
+            System.out.printf("%4d", j);
+            if (j % 5 == 4) {
+                System.out.println();
+            } else {
+                System.out.print(" ");
+            }
+        }
         //5. Проверка количества единиц на четность
         int num5 = 3141591;
         int count = 0;
@@ -85,7 +92,7 @@ public class CyclesTheme {
                 System.out.print("*");
             }
             System.out.println();
-        }
+        }//6.2
         int a = 5;
         while(a > 0){
             int b = 0;
@@ -95,9 +102,42 @@ public class CyclesTheme {
             }
             System.out.println();
             a--;
-        }  
+        } //6.3 
+        int k = 1;
+        do {
+            int t = 0;
+            do {
+                System.out.print("$");
+                t++;
+            } while (t < k);
+            System.out.println();
+            k++;
+        } while (k <= 3);
+        int k1 = 2;
+        do {
+            int t = 0;
+            do {
+                System.out.print("$");
+                t++;
+            } while (t < k1);
+            System.out.println();
+            k1--;
+        } while (k1 >= 1);
         //7. Отображение ASCII-символов
         //8. Проверка, является ли число палиндромом
+        int srcNum = 12321;
+        int num8 = srcNum;
+        int palindrome = 0;
+        while (num8 != 0) {
+            int digit = num8 % 10;
+            palindrome = palindrome * 10 + digit;
+            num8 /= 10;
+        }
+        if (srcNum == palindrome) {
+            System.out.println("Число является палиндромом " + palindrome);
+        } else {
+            System.out.println("Число не является палиндромом " + palindrome);
+        }
         //9. Определение, является ли число счастливым
         //10. Вывод таблицы умножения Пифагора
         for (int i = 2; i <= 9; i++) {
