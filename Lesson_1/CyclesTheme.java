@@ -139,6 +139,22 @@ public class CyclesTheme {
             System.out.println("Число не является палиндромом " + palindrome);
         }
         //9. Определение, является ли число счастливым
+         int number = 123411;
+        int step = 1;
+        int count = 0;
+        int sum12 = 0;
+        while (number != 0) {
+            sum12 += step * (number % 10);
+            number /= 10;
+            if (++count == 3) {
+                step =- step;
+            }
+        }
+        if (count == 6 && sum12 == 0) {
+            System.out.println("Число является счастливым");
+        } else {
+            System.out.println("Число не является счастливым");
+        }
         //10. Вывод таблицы умножения Пифагора
         for (int i = 2; i <= 9; i++) {
             for (int j = 2; j <= 9; j++) {
