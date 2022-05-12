@@ -16,8 +16,7 @@ public class CyclesTheme {
             }
             currentValue++;
         } while (currentValue <= limit);
-        System.out.println("Сумма четных чисел = " + oddNumberSum);
-        System.out.println("Сумма нечетных чисел = " + evenNumberSum);
+        System.out.println("В промежутке [-10, 21] сумма четных чисел = " + oddNumberSum + ", а нечетных = " + evenNumberSum);
 
         //2. Вывод чисел между max и min
         int num1 = 10;
@@ -58,7 +57,7 @@ public class CyclesTheme {
             num /= 10;
             sum += digit;
         }
-        System.out.println("Число в обратном порядке: " + reversed + ", сумма его цифр " + sum);
+        System.out.println("Число в обратном порядке: " + reversed + "\n сумма его цифр " + sum);
         
         //4. Вывод чисел на консоль в несколько строк
         for (int j = 1; j <= 24; j += 2) {
@@ -80,11 +79,11 @@ public class CyclesTheme {
             }
             num5 /= 10;
         } if (count % 2 == 0) {
-            word = "Четным";
+            word = "Четное";
         } else {
-            word = "Нечетным";
+            word = "Нечетное";
         }
-        System.out.println("Количество еденийц: " + count + ", является " + word);
+        System.out.println(" Число" + num5 + " содержит " + count + word + "количество еденийц" );
 
         //6. Отображение фигур в консоли
        for(int i = 0; i < 5; i++){
@@ -124,6 +123,11 @@ public class CyclesTheme {
             k1--;
         } while (k1 >= 1);
         //7. Отображение ASCII-символов
+        System.out.println("Dec " + "Char");
+        for (int i = 1; i < 48; i+=2) {
+            char ch = (char) i;
+            System.out.printf("%3d%5s\n", i, ch);
+        }
         //8. Проверка, является ли число палиндромом
         int srcNum = 12321;
         int num8 = srcNum;
@@ -134,23 +138,24 @@ public class CyclesTheme {
             num8 /= 10;
         }
         if (srcNum == palindrome) {
-            System.out.println("Число является палиндромом " + palindrome);
+            System.out.println("Число " + palindrome +  " является палиндромом");
         } else {
-            System.out.println("Число не является палиндромом " + palindrome);
+            System.out.println("Число " + palindrome +  " не является палиндромом ");
         }
+
         //9. Определение, является ли число счастливым
          int number = 123411;
         int step = 1;
-        int count = 0;
+        int count9 = 0;
         int sum12 = 0;
         while (number != 0) {
             sum12 += step * (number % 10);
             number /= 10;
-            if (++count == 3) {
+            if (++count9 == 3) {
                 step =- step;
             }
         }
-        if (count == 6 && sum12 == 0) {
+        if (count9 == 6 && sum12 == 0) {
             System.out.println("Число является счастливым");
         } else {
             System.out.println("Число не является счастливым");
