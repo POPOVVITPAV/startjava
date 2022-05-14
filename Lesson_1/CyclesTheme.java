@@ -144,7 +144,7 @@ public class CyclesTheme {
         }
 
         //9. Определение, является ли число счастливым
-         int number = 123411;
+        int number = 123411;
         int step = 1;
         int count9 = 0;
         int sum12 = 0;
@@ -161,9 +161,16 @@ public class CyclesTheme {
             System.out.println("Число не является счастливым");
         }
         //10. Вывод таблицы умножения Пифагора
+        System.out.println("10. Вывод таблицы умножения Пифагора");
+        System.out.print(" |");
         for (int i = 2; i <= 9; i++) {
+             System.out.printf("%4d", i);
+        }
+        System.out.println("\n__________________________________");
+        for (int i = 2; i <= 9; i++) {
+            System.out.print(i + "|");
             for (int j = 2; j <= 9; j++) {
-                System.out.printf("%4d", (i * j));
+                        System.out.printf("%4d", (i * j));
             }
             System.out.println();
         }
