@@ -4,6 +4,7 @@ public class CyclesTheme {
 
     public static void main(String[] args) {
         //1. Подсчет суммы четных и нечетных чисел
+        System.out.println("\n1. Подсчет суммы четных и нечетных чисел\n");
         int oddNumberSum = 0;
         int evenNumberSum = 0;
         int currentValue = -10;
@@ -19,6 +20,7 @@ public class CyclesTheme {
         System.out.println("В промежутке [-10, 21] сумма четных чисел = " + oddNumberSum + ", а нечетных = " + evenNumberSum);
 
         //2. Вывод чисел между max и min
+        System.out.println("\n2. Вывод чисел между max и min\n");
         int num1 = 10;
         int num2 = 5;
         int num3 = -1;
@@ -48,6 +50,7 @@ public class CyclesTheme {
         }
         
         //3. Вывод реверсивного числа и суммы его цифр
+        System.out.println("\n3. Вывод реверсивного числа и суммы его цифр\n");
         int num = 1234;
         int reversed = 0;
         int sum = 0;
@@ -60,25 +63,38 @@ public class CyclesTheme {
         System.out.println("Число в обратном порядке: " + reversed + "\n сумма его цифр " + sum);
         
         //4. Вывод чисел на консоль в несколько строк
-        for (int j = 1; j <= 24; j += 2) {
-            System.out.printf("%4d", j);
-            if (j % 5 == 4) {
+        System.out.println("\n4. Вывод чисел на консоль в несколько строк\n");
+        int count = 0;
+        for (int i = 1; i <=24; i+=2) {
+            System.out.printf("%4d", i);
+            count++;
+            if (count == 5) {
                 System.out.println();
+                count = 0;
             } else {
-                System.out.print(" ");
+                System.out.print("");
             }
         }
+        if (count > 0) {
+            int j =5 - count;
+            for (;j > 0; j--) {
+                String with3digits = String.format("%4d", 0);
+                System.out.print(with3digits);
+            }
+        }
+
         //5. Проверка количества единиц на четность
+        System.out.println("\n5. Проверка количества единиц на четность\n");
         int num5 = 3141591;
-        int count = 0;
+        int count5 = 0;
         String word;
         while (num5 !=0) {
             int numOne = num5 % 10;
             if (numOne == 1) {
-                count++;
+                count5++;
             }
             num5 /= 10;
-        } if (count % 2 == 0) {
+        } if (count5 % 2 == 0) {
             word = "Четное";
         } else {
             word = "Нечетное";
@@ -86,7 +102,8 @@ public class CyclesTheme {
         System.out.println(" Число" + num5 + " содержит " + count + word + "количество еденийц" );
 
         //6. Отображение фигур в консоли
-       for(int i = 0; i < 5; i++){
+        System.out.println("\n6. Отображение фигур в консоли\n");
+        for(int i = 0; i < 5; i++){
             for(int j = 0; j < 10; j++){
                 System.out.print("*");
             }
@@ -122,13 +139,21 @@ public class CyclesTheme {
             System.out.println();
             k1--;
         } while (k1 >= 1);
+
         //7. Отображение ASCII-символов
-        System.out.println("Dec " + "Char");
+        System.out.println("\n7. Отображение ASCII-символов\n");
+        System.out.println("Dec " + " Char");
         for (int i = 1; i < 48; i+=2) {
             char ch = (char) i;
-            System.out.printf("%3d%5s\n", i, ch);
+            System.out.printf("%3d%6s\n", i, ch);
         }
+        for (int i = 98; i < 122; i+=2) {
+            char ch = (char) i;
+            System.out.printf("%3d%6s\n", i, ch);
+        }
+
         //8. Проверка, является ли число палиндромом
+        System.out.println("\n8. Проверка, является ли число палиндромом\n");
         int srcNum = 12321;
         int num8 = srcNum;
         int palindrome = 0;
@@ -144,6 +169,7 @@ public class CyclesTheme {
         }
 
         //9. Определение, является ли число счастливым
+        System.out.println("\n9. Определение, является ли число счастливым\n");
         int number = 123411;
         int step = 1;
         int count9 = 0;
@@ -160,8 +186,9 @@ public class CyclesTheme {
         } else {
             System.out.println("Число не является счастливым");
         }
+
         //10. Вывод таблицы умножения Пифагора
-        System.out.println("10. Вывод таблицы умножения Пифагора");
+        System.out.println("\n10. Вывод таблицы умножения Пифагора\n");
         System.out.print(" |");
         for (int i = 2; i <= 9; i++) {
              System.out.printf("%4d", i);
