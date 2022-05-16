@@ -46,11 +46,11 @@ public class CyclesTheme {
             min = num2;    
         }
         for (int i = min + 1; i < max; i++) {
-            System.out.print(i + ",");
+            System.out.print(i + " ");
         }
         
         //3. Вывод реверсивного числа и суммы его цифр
-        System.out.println("\n3. Вывод реверсивного числа и суммы его цифр\n");
+        System.out.println("\n\n3. Вывод реверсивного числа и суммы его цифр\n");
         int num = 1234;
         int reversed = 0;
         int sum = 0;
@@ -84,7 +84,7 @@ public class CyclesTheme {
         }
 
         //5. Проверка количества единиц на четность
-        System.out.println("\n5. Проверка количества единиц на четность\n");
+        System.out.println("\n\n5. Проверка количества единиц на четность\n");
         int num5 = 3141591;
         int count5 = 0;
         String word;
@@ -108,7 +108,9 @@ public class CyclesTheme {
                 System.out.print("*");
             }
             System.out.println();
-        }//6.2
+        }
+        //6.2
+        System.out.println();
         int a = 5;
         while(a > 0){
             int b = 0;
@@ -118,7 +120,9 @@ public class CyclesTheme {
             }
             System.out.println();
             a--;
-        } //6.3 
+        } 
+        //6.3
+        System.out.println(); 
         int k = 1;
         do {
             int t = 0;
