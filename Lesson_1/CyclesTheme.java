@@ -29,23 +29,14 @@ public class CyclesTheme {
         if (num1 > num2 && num2 > num3) {
             max = num1;
             min = num3;
-        } else if (num1 < num2 && num2 < num3) {
-            max = num3;
-            min = num1;
         } else if (num2 > num3 && num3 > num1) {
             max = num2;
             min = num1;
-        } else if (num2 < num3 && num3 < num1) {
-            max = num2;
-            min = num1;    
         } else if (num3 > num1 && num1 > num2) {
             max = num3;
             min = num2;
-        }else if (num3 < num1 && num1 < num2) {
-            max = num3;
-            min = num2;    
         }
-        for (int i = min + 1; i < max; i++) {
+        for (int i = max; i <= min; i--) {
             System.out.print(i + " ");
         }
         
