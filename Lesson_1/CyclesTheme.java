@@ -165,7 +165,7 @@ public class CyclesTheme {
         int number = srcNumber;
         int count9 = 0;
         int divNum = 1;
-        // Ищем серидину числа и знаменатель дополняем нулями
+        // Ищем середину числа и знаменатель дополняем нулями
         while (number != 0) {
              number /= 10;
              count9++;
