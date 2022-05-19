@@ -36,7 +36,7 @@ public class CyclesTheme {
             max = num3;
             min = num2;
         }
-        for (int i = max; i <= min; i--) {
+        for (int i = max; i >= min; i--) {
             System.out.print(i + " ");
         }
         
@@ -56,7 +56,7 @@ public class CyclesTheme {
         //4. Вывод чисел на консоль в несколько строк
         System.out.println("\n4. Вывод чисел на консоль в несколько строк\n");
         int count = 0;
-        for (int i = 1; i <=24; i+=2) {
+        for (int i = 1; i <=24; i += 2) {
             System.out.printf("%4d", i);
             count++;
             if (count == 5) {
