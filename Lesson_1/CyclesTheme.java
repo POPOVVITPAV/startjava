@@ -165,27 +165,25 @@ public class CyclesTheme {
         int number = srcNumber;
         int count9 = 0;
         int divNum = 1;
-        // Ищем середину числа и знаменатель дополняем нулями
+        // Ищем серидину числа и знаменатель дополняем нулями
         while (number != 0) {
              number /= 10;
-             count9++;
+            count++;
         }
-        count9 /= 2;
+        count /= 2;
         for (int i = count9; i > 0; i--) {
             divNum *= 10;
-        }// Отделяем левую половину числа и считаем сумму
+        }
         int leftNum = srcNumber / divNum;
-        int sumLeftNum = 0;
-        while (leftNum != 0) {
-            int digit = leftNum % 10;
-            sumLeftNum += digit;
-            leftNum /= 10;
-        }// Отделяем правую половину числа и считаем сумму
         int rightNum = srcNumber % divNum;
+        int sumLeftNum = 0;
         int sumRightNum = 0;
-        while (rightNum != 0) {
-            int digit = rightNum % 10;
-            sumRightNum += digit;
+        while (leftNum != 0 && rightNum != 0) {
+            int digit = leftNum % 10;
+            int digitR = rightNum % 10;
+            sumLeftNum += digit;
+            sumRightNum += digitR;
+            leftNum /= 10;
             rightNum /= 10;
         }
         if (sumLeftNum == sumRightNum) {
