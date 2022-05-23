@@ -25,7 +25,7 @@ public class CyclesTheme {
         int num2 = 5;
         int num3 = -1;
         int max = 0;
-        int min = 0;
+        int min = 0; 
         if (num1 > num2 && num2 > num3) {
             max = num1;
             min = num3;
@@ -36,7 +36,7 @@ public class CyclesTheme {
             max = num3;
             min = num2;
         }
-        for (int i = max; i >= min; i--) {
+        for (int i = max - 1; i > min; i--) {
             System.out.print(i + " ");
         }
         
@@ -162,27 +162,15 @@ public class CyclesTheme {
         //9. Определение, является ли число счастливым
         System.out.println("\n9. Определение, является ли число счастливым\n");
         int srcNumber = 123411;
-        int number = srcNumber;
-        int count9 = 0;
-        int divNum = 1;
-        // Ищем серидину числа и знаменатель дополняем нулями
-        while (number != 0) {
-             number /= 10;
-            count++;
-        }
-        count /= 2;
-        for (int i = count9; i > 0; i--) {
-            divNum *= 10;
-        }
-        int leftNum = srcNumber / divNum;
-        int rightNum = srcNumber % divNum;
-        int sumLeftNum = 0;
+        int sumLeftNum  = 0;
         int sumRightNum = 0;
-        while (leftNum != 0 && rightNum != 0) {
-            int digit = leftNum % 10;
-            int digitR = rightNum % 10;
-            sumLeftNum += digit;
-            sumRightNum += digitR;
+        int leftNum = srcNumber / 1000;
+        int rightNum = srcNumber % 1000;
+        while (leftNum != 0) {
+            int digitLeft = leftNum % 10;
+            int digitRight = rightNum % 10;
+            sumLeftNum += digitLeft;
+            sumRightNum += digitRight;
             leftNum /= 10;
             rightNum /= 10;
         }
