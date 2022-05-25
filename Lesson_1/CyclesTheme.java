@@ -166,11 +166,12 @@ public class CyclesTheme {
         int sumRightNum = 0;
         int leftNum = srcNumber / 1000;
         int rightNum = srcNumber % 1000;
+        int digit = 0;
         while (leftNum != 0) {
-            int digitLeft = leftNum % 10;
-            int digitRight = rightNum % 10;
-            sumLeftNum += digitLeft;
-            sumRightNum += digitRight;
+            digit = leftNum % 10;
+            sumLeftNum += digit;
+            digit = rightNum % 10;
+            sumRightNum += digit;
             leftNum /= 10;
             rightNum /= 10;
         }
