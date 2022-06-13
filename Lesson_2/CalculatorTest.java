@@ -8,7 +8,7 @@ public class CalculatorTest {
         Scanner sc = new Scanner(System.in);
         Calculator calc = new Calculator();
         String answer;
-            while (true) {
+            do{
                 System.out.print("Введите первое число: ");
                 calc.setNum1(sc.nextInt());
                 sc.nextLine();
@@ -17,9 +17,9 @@ public class CalculatorTest {
                 System.out.print("Введите второе число: ");
                 calc.setNum2(sc.nextInt());
                 calc.calculate();
+                sc.nextLine();
                 while (true) {
                     System.out.println("Хотите продолжить вычисления? [yes/no]"); 
-                    sc.nextLine();
                     answer = sc.nextLine();
                     if (answer.equals("no")) {
                         break;
@@ -27,12 +27,7 @@ public class CalculatorTest {
                       break;
                     }
                 }
-                if (answer.equals("no")) {
-                    break;
-                } else if (answer.equals("yes")) {
-                    continue;
-                }
-            }
+            } while (answer.equals("yes"));
         sc.close();
         } 
   }
