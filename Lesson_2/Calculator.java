@@ -25,16 +25,16 @@ public class Calculator {
                 result = num1 + num2;
               break;
             case '-': 
-                result = num1 + num2;
+                result = num1 - num2;
               break;
             case '*': 
-                result = num1 + num2;
+                result = num1 * num2;
               break;
             case '/': 
-                result = num1 + num2;
+                result = num1 / num2;
               break;
             case '%': 
-                result = num1 + num2;
+                result = num1 % num2;
               break;
             case '^': 
                 for (int i = 0; i < num2; i++) {
