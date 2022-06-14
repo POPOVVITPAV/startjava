@@ -23,27 +23,26 @@ public class Calculator {
         switch (sign) {
             case '+': 
                 result = num1 + num2;
-              break;
+                break;
             case '-': 
                 result = num1 - num2;
-              break;
+                break;
             case '*': 
                 result = num1 * num2;
-              break;
+                break;
             case '/': 
                 result = num1 / num2;
-              break;
+                break;
             case '%': 
                 result = num1 % num2;
-              break;
+                break;
             case '^': 
                 for (int i = 0; i < num2; i++) {
                     result *= num1;
                 }
-              break;
+                break;
             default:
-              System.out.println("Неизвестная операция");
-              break;
+                break;
         }
         System.out.println(num1 + " " + sign + " " + num2 + " = " + result);
     }
