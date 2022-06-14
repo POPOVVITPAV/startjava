@@ -42,6 +42,8 @@ public class Calculator {
                 }
                 break;
             default:
+                System.out.println("Неизвестная операция ");
+                result = 0;
                 break;
         }
         System.out.println(num1 + " " + sign + " " + num2 + " = " + result);
