@@ -18,11 +18,10 @@ public class CalculatorTest {
             calc.setNum2(sc.nextInt());
             calc.calculate();
             sc.nextLine();
-            answer = "";
-            while (!(answer.equals("yes") || answer.equals("no"))) {
+            do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]"); 
                 answer = sc.nextLine();
-            }
+            } while (!(answer.equals("yes") || answer.equals("no"))); 
         }
         sc.close();
     } 

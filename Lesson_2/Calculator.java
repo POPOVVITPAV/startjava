@@ -19,7 +19,7 @@ public class Calculator {
     }
 
     public void calculate() {
-        int result = 1;
+        int result = 0;
         switch (sign) {
             case '+': 
                 result = num1 + num2;
@@ -37,14 +37,13 @@ public class Calculator {
                 result = num1 % num2;
                 break;
             case '^': 
+                result = 1;
                 for (int i = 0; i < num2; i++) {
                     result *= num1;
                 }
                 break;
             default:
                 System.out.println("Неизвестная операция ");
-                result = 0;
-                break;
         }
         System.out.println(num1 + " " + sign + " " + num2 + " = " + result);
     }
