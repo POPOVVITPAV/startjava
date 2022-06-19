@@ -45,8 +45,8 @@ public class Jaeger {
         this.weight = weight;
         this.speed = speed;
         this.armor = armor;
-        this.speed = kaijuKilled;
-        this.armor = pilots;
+        this.kaijuKilled = kaijuKilled;
+        this.pilots = pilots;
     }
 
     public String getModelName() {
@@ -129,18 +129,18 @@ public class Jaeger {
     }
 
     public void move() {
-        System.out.println("Go - go - go");
+        System.out.println(" Go - go - go");
     }
 
-    public void drift(int pilots) {
+    public void drift() {
         if (2 == pilots || 3 == pilots) {
-          System.out.println("true");
+          System.out.println(" true");
         } else {
-          System.out.println("false");
+          System.out.println(" false");
         }
     }
 
-    public void killKaiju(int kaijuKilled) {
-        System.out.format("Number of killed Kaiju %d", kaijuKilled);
+    public void killKaiju() {
+        System.out.format(" Number of killed Kaiju %d", ++kaijuKilled);
     }
 }
