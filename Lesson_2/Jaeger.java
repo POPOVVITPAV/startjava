@@ -17,27 +17,6 @@ public class Jaeger {
 
     }
 
-    public Jaeger(String modelName, String status) {
-        this.modelName = modelName;
-        this.status = status;
-    }
-
-    public Jaeger(String modelName, String status, String origin, float weight) {
-        this.modelName = modelName;
-        this.status = status;
-        this.origin = origin;
-        this.weight = weight;
-    }
-
-    public Jaeger(String modelName, String status, String origin, float weight, int speed,int armor) {
-        this.modelName = modelName;
-        this.status = status;
-        this.origin = origin;
-        this.weight = weight;
-        this.speed = speed;
-        this.armor = armor;
-    }
-
     public Jaeger(String modelName, String status, String origin, float weight, int speed,int armor, int kaijuKilled, int pilots) {
         this.modelName = modelName;
         this.status = status;
