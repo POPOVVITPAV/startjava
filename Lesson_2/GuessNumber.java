@@ -1,22 +1,56 @@
 package Lesson_2;
 
+import java.util.Scanner;
+
 public class GuessNumber {
    
-    Player player;
+    Player player1;
+    Player player2;
+    Scanner scanner; 
+    private int targetNumber;
     
-    public boolean startGame() {
-        player = new Player();
-        int targetNumber = (int) (Math.random() * 100);
-        System.out.println("Компьютер загадал число от 0 до 100" + targetNumber);
-        if (targetNumber == player.getNum()){
-            System.out.printf("\n Победу одержал %s", player.getName());
-            return true;
-        } else if (player.getNum() > targetNumber) {
-            System.out.printf("\nчисло %d больше того, что загадал компьютер", player.getNum());
-            return false;
+    public void startGame() {
+        scanner = new Scanner(System.in);
+        System.out.print("Первый игрок введи имя:");
+        player1 = new Player(scanner.nextLine());
+        System.out.print("Второй игрок введи имя: ");
+        player2 = new Player(scanner.nextLine());
+        String answer = "yes";
+        while (answer.equals("yes")) {
+            targetNumber = (int) (Math.random() * 100);
+            System.out.printf("Компьютер загадал число от 0 до 100 %d\n", targetNumber);
+            while (true) {
+               int player1Answer = win(player1.getName());
+               if (targetNumber == player1Answer) {
+                    break;
+               } 
+                int player2Answer = win(player2.getName());
+                if (targetNumber == player2Answer) {
+                    break;
+                }
+            }
+            scanner.nextLine(); 
+            do {
+                System.out.print("Хотите продолжить игру? [yes/no]: ");
+                answer = scanner.nextLine();
+            } while (!(answer.equals("yes")) && !(answer.equals("no")));
+        } 
+        scanner.close(); 
+    }
+
+    public int win(String playerName) {
+        scanner = new Scanner(System.in);
+        System.out.printf("%s введи число от 0 до 100 :", playerName);
+        int playerNum =  scanner.nextInt();
+        if (targetNumber == playerNum){
+            System.out.printf("Победу одержал %s\n", playerName);
+            return playerNum;
+        } else if (targetNumber < playerNum) {
+            System.out.printf("число %d больше того, что загадал компьютер\n", playerNum);
+            return playerNum;
         } else {
-            System.out.printf("\nчисло %d меньше того, что загадал компьютер", player.getNum());
-            return false;
+            System.out.printf("число %d меньше того, что загадал компьютер\n", playerNum);
+            return playerNum;
         }
     }
 }
