@@ -7,7 +7,6 @@ public class GuessNumber {
     Player player1;
     Player player2;
     Scanner scanner; 
-    private int targetNumber;
     
     public void startGame() {
         scanner = new Scanner(System.in);
@@ -17,14 +16,14 @@ public class GuessNumber {
         player2 = new Player(scanner.nextLine());
         String answer = "yes";
         while (answer.equals("yes")) {
-            targetNumber = (int) (Math.random() * 100);
+            int targetNumber = (int) (Math.random() * 100);
             System.out.printf("Компьютер загадал число от 0 до 100 %d\n", targetNumber);
             while (true) {
-               int player1Answer = win(player1.getName());
+               int player1Answer = win(player1.getName(), targetNumber);
                if (targetNumber == player1Answer) {
                     break;
                } 
-                int player2Answer = win(player2.getName());
+                int player2Answer = win(player2.getName(), targetNumber);
                 if (targetNumber == player2Answer) {
                     break;
                 }
@@ -38,7 +37,7 @@ public class GuessNumber {
         scanner.close(); 
     }
 
-    public int win(String playerName) {
+    public int win(String playerName, int targetNumber) {
         scanner = new Scanner(System.in);
         System.out.printf("%s введи число от 0 до 100 :", playerName);
         int playerNum =  scanner.nextInt();
