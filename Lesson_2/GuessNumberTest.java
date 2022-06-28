@@ -9,16 +9,15 @@ public class GuessNumberTest {
         Player player1 = new Player(scanner.nextLine());
         System.out.print("Второй игрок введи имя: ");
         Player player2 = new Player(scanner.nextLine());
-        GuessNumber guessNumber = new GuessNumber(player1, player2);
+        GuessNumber game = new GuessNumber(player1, player2);
         String answer = "yes";
         while (answer.equals("yes")) {
-            guessNumber.startGame();
+            game.launch();
             do {
                 System.out.print("Хотите продолжить игру? [yes/no]: ");
                 answer = scanner.nextLine();
-            } while (!(answer.equals("yes")) && !(answer.equals("no")));
+            } while (!answer.equals("yes") && !answer.equals("no"));
         }
         scanner.close();   
      } 
-
  }
