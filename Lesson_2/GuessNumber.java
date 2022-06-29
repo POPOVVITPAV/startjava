@@ -27,21 +27,19 @@ public class GuessNumber {
         }
     }
 
-    public boolean isGuessed(String playerName, int targetNumber) {
+    private boolean isGuessed(String playerName, int targetNumber) {
         System.out.printf("%s введи число от 0 до 100 :", playerName);
         int playerNum =  scanner.nextInt();
-        boolean result = false;
         if (targetNumber == playerNum) {
             System.out.printf("Победу одержал %s\n", playerName);
-            result = true;
+            return true;
         }
         if (targetNumber < playerNum) {
             System.out.printf("число %d больше того, что загадал компьютер\n", playerNum);
-        }
-        if (targetNumber > playerNum) {
+        } else  {
             System.out.printf("число %d меньше того, что загадал компьютер\n", playerNum);
         } 
-        return result;
+        return false;
     }
 }
 
