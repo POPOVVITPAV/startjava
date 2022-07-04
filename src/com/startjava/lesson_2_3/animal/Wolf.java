@@ -1,4 +1,4 @@
-package Lesson_2;
+package com.startjava.lesson_2_3.animal;
 
 public class Wolf {
   
@@ -53,7 +53,7 @@ public class Wolf {
     }
 
     public void walk() {
-        System.out.println("Идет...");
+        System.out.println("Go-go-go");
     } 
 
     public void sit() {
