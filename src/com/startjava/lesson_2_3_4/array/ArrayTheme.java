@@ -37,9 +37,9 @@ public class ArrayTheme {
         arrayOutput(doubleArr);
         System.out.println("\n");
         int count = 0;
-        int middleNum = len / 2;
+        double middleNum = doubleArr[len / 2];
         for (int i = 0; i < len; i++) {
-            if (doubleArr[middleNum] < doubleArr[i]) {
+            if (middleNum < doubleArr[i]) {
                 doubleArr[i] = 0;
                 count++;
             }
@@ -50,15 +50,13 @@ public class ArrayTheme {
         System.out.println("\n\n4. Вывод элементов массива лесенкой в обратном порядке");
         char[] charArr = new char[26];
         len = charArr.length;
-        int numChar = 65;
         for (int i = 0; i < len; i++) {
-            charArr[i] = (char) numChar;
-            numChar++;
+            charArr[i] = (char) (65 + i);
         }
         arrayOutput(charArr);
         System.out.println();
-        for (int i = len; i > 0 ; i--) {
-            for (int j = len - 1; j > i-2 ; j--) {
+        for (int i = len; i > 0; i--) {
+            for (int j = len - 1; j > i - 2; j--) {
                 System.out.print(charArr[j]);
             }
             System.out.println();
@@ -68,7 +66,6 @@ public class ArrayTheme {
         intArray = new int [30];
         len = intArray.length;
         for (int i = 0; i < len; i++) {
-            intArray[i] = (int) (Math.random() * (40 + 1)) + 60;;
             for (int j = 0; j < i ; j++) {
                 if (intArray[j] == intArray[i]) {
                     intArray[i] = (int) (Math.random() * (40 + 1)) + 60;
@@ -79,28 +76,28 @@ public class ArrayTheme {
         arrayOutput(intArray);
     }
 
-        private static void arrayOutput( char[] arrayIn){
-            for (char value : arrayIn) {
-                System.out.print(value + " ");
-            }
+    private static void arrayOutput(char[] array) {
+        for (char letter : array) {
+            System.out.print(letter + " ");
         }
+    }
 
-        private static void arrayOutput(int[] array2){
-            for (int value : array2) {
-                System.out.print(value + " ");
-            }
+    private static void arrayOutput(int[] array) {
+        for (int num : array) {
+            System.out.print(num + " ");
         }
+    }
 
-        private static void arrayOutput( double[] arrayIn){
-            int count = 0;
-            for (double value : arrayIn) {
-                System.out.printf(" %.2f", value);
-                count++;
-                if (count == 8) {
-                    System.out.println();
-                }
+    private static void arrayOutput(double[] array) {
+        int count = 0;
+        for (double num : array) {
+            System.out.printf(" %.2f", num);
+            count++;
+            if (count == 8) {
+                System.out.println();
             }
         }
+    }
 }
 
 
