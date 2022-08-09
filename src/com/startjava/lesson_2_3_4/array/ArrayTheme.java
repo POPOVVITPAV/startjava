@@ -1,83 +1,85 @@
-
 package com.startjava.lesson_2_3_4.array;
 
 public class ArrayTheme {
     public static void main(String[] args) {
         System.out.println("1. Реверс значений массива");
         int[] array = {1,2,3,4,5,6,7};
-        int[] arrayRevers = new int[array.length];
+        int len = array.length;
+        int[] arrayRevers = new int[len];
         arrayOutput(array);
-        for (int i = 0; i < array.length ; i++) {
-            arrayRevers[array.length - 1 - i] = array[i];
+        for (int i = 0; i < len ; i++) {
+            arrayRevers[len - 1 - i] = array[i];
         }
         System.out.println();
         arrayOutput(arrayRevers);
 
         System.out.println("\n\n2. Вывод произведения элементов массива");
-        int[] array2 = new int[10];
-        for (int i = 0; i < array2.length; i++) {
-            array2[i] = i;
+        int[] intArray = new int[10];
+        len = intArray.length;
+        for (int i = 0; i < len; i++) {
+            intArray[i] = i;
         }
-        arrayOutput(array2);
+        arrayOutput(intArray);
         System.out.println();
         int product = 1;
-        int num = 0;
-        for (int i = 1; i < array2.length - 1; i++) {
-            String sing = (array2[i] == array2.length - 2) ? "=" : "*";
-            System.out.print(array2[i] + sing);
-            product *= array2[i];
+        for (int i = 1; i < len - 1; i++) {
+            System.out.print(intArray[i] + ((intArray[i] == len - 2) ? "=" : "*"));
+            product *= intArray[i];
         }
         System.out.println(product);
 
         System.out.println("\n\n3. Удаление элементов массива");
-        double [] array3 = new double[15];
-        int count = 0;
-        for (int i = 0; i < array3.length; i++) {
-            array3[i] = Math.random();
+        double[] doubleArr = new double[15];
+        len = doubleArr.length;
+        for (int i = 0; i < len; i++) {
+            doubleArr[i] = Math.random();
         }
-        arrayOutput(array3);
+        arrayOutput(doubleArr);
         System.out.println("\n");
-        int middleMass = array3.length / 2;
-        for (int i = 0; i < array3.length; i++) {
-            if (array3[middleMass] < array3[i]) {
-                array3[i] = 0;
+        int count = 0;
+        int middleNum = len / 2;
+        for (int i = 0; i < len; i++) {
+            if (doubleArr[middleNum] < doubleArr[i]) {
+                doubleArr[i] = 0;
                 count++;
             }
         }
-        arrayOutput(array3);
+        arrayOutput(doubleArr);
         System.out.println(" \nколичество обнуленных ячеек = " + count);
 
         System.out.println("\n\n4. Вывод элементов массива лесенкой в обратном порядке");
-        char[] array4 = new char[26];
+        char[] charArr = new char[26];
+        len = charArr.length;
         int numChar = 65;
-        for (int i = 0; i < array4.length; i++) {
-            array4[i] = (char) numChar;
+        for (int i = 0; i < len; i++) {
+            charArr[i] = (char) numChar;
             numChar++;
         }
-        arrayOutput(array4);
+        arrayOutput(charArr);
         System.out.println();
-        for (int i = array4.length; i > 0 ; i--) {
-            for (int j = array4.length - 1; j > i-2 ; j--) {
-                System.out.print(array4[j]);
+        for (int i = len; i > 0 ; i--) {
+            for (int j = len - 1; j > i-2 ; j--) {
+                System.out.print(charArr[j]);
             }
             System.out.println();
         }
 
         System.out.println("\n\n5. Генерация уникальных чисел");
-        int[] array5 = new int [30];
-        for (int i = 0; i < array5.length; i++) {
-            array5[i] = (int) (Math.random() * (40 + 1)) + 60;;
+        intArray = new int [30];
+        len = intArray.length;
+        for (int i = 0; i < len; i++) {
+            intArray[i] = (int) (Math.random() * (40 + 1)) + 60;;
             for (int j = 0; j < i ; j++) {
-                if (array5[j] == array5[i]) {
-                    array5[i] = (int) (Math.random() * (40 + 1)) + 60;
+                if (intArray[j] == intArray[i]) {
+                    intArray[i] = (int) (Math.random() * (40 + 1)) + 60;
                     j = -1;
                 }
             }
         }
-        arrayOutput(array5);
+        arrayOutput(intArray);
     }
 
-        public static void arrayOutput( char[] arrayIn){
+        private static void arrayOutput( char[] arrayIn){
             for (char value : arrayIn) {
                 System.out.print(value + " ");
             }
@@ -89,13 +91,7 @@ public class ArrayTheme {
             }
         }
 
-       public static void arrayOutput(String[] arrayIn){
-            for (String value : arrayIn) {
-                System.out.print(value + ",");
-            }
-        }
-
-        public static void arrayOutput( double[] arrayIn){
+        private static void arrayOutput( double[] arrayIn){
             int count = 0;
             for (double value : arrayIn) {
                 System.out.printf(" %.2f", value);
