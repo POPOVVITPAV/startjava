@@ -3,18 +3,18 @@ package com.startjava.lesson_2_3_4.array;
 public class ArrayTheme {
     public static void main(String[] args) {
         System.out.println("1. Реверс значений массива");
-        int[] array = {1,2,3,4,5,6,7};
-        int len = array.length;
+        int[] intArray = {1,2,3,4,5,6,7};
+        int len = intArray.length;
         int[] arrayRevers = new int[len];
-        arrayOutput(array);
+        arrayOutput(intArray);
         for (int i = 0; i < len ; i++) {
-            arrayRevers[len - 1 - i] = array[i];
+            arrayRevers[len - 1 - i] = intArray[i];
         }
         System.out.println();
         arrayOutput(arrayRevers);
 
         System.out.println("\n\n2. Вывод произведения элементов массива");
-        int[] intArray = new int[10];
+        intArray = new int[10];
         len = intArray.length;
         for (int i = 0; i < len; i++) {
             intArray[i] = i;
@@ -65,12 +65,24 @@ public class ArrayTheme {
         System.out.println("\n\n5. Генерация уникальных чисел");
         intArray = new int [30];
         len = intArray.length;
+        intArray[0] = 60;
         for (int i = 0; i < len; i++) {
             for (int j = 0; j < i ; j++) {
-                if (intArray[j] == intArray[i]) {
+                if (intArray[j] == intArray[i] || intArray[i] == 0) {
                     intArray[i] = (int) (Math.random() * (40 + 1)) + 60;
                     j = -1;
                 }
+            }
+        }
+        arrayOutput(intArray);
+        System.out.println();
+        int temp;
+        for (int i = len - 1; i > 0 ; i--) {
+            for (int j = 0; j < i; j++)
+            if (intArray[j] > intArray[j + 1]) {
+                temp = intArray[j];
+                intArray[j] = intArray[j + 1];
+                intArray[j + 1] = temp;
             }
         }
         arrayOutput(intArray);
