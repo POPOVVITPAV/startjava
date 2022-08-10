@@ -78,11 +78,12 @@ public class ArrayTheme {
         System.out.println();
         int temp;
         for (int i = len - 1; i > 0 ; i--) {
-            for (int j = 0; j < i; j++)
-            if (intArray[j] > intArray[j + 1]) {
-                temp = intArray[j];
-                intArray[j] = intArray[j + 1];
-                intArray[j + 1] = temp;
+            for (int j = 0; j < i; j++){
+                if (intArray[j] > intArray[j + 1]) {
+                    temp = intArray[j];
+                    intArray[j] = intArray[j + 1];
+                    intArray[j + 1] = temp;
+                }
             }
         }
         arrayOutput(intArray);
