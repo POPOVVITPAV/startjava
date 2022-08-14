@@ -18,11 +18,17 @@ public class Calculator {
         this.sign = sign;
     }
 
-    public int getNum1() { return num1; }
+    public int getNum1() {
+        return num1;
+    }
 
-    public int getNum2() { return num2; }
+    public int getNum2() {
+        return num2;
+    }
 
-    public char getSign() { return sign; }
+    public char getSign() {
+        return sign;
+    }
 
     public void splitArray(String str) {
         String[] strArray = str.split(" ");
