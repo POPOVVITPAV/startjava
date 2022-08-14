@@ -18,7 +18,7 @@ public class Calculator {
       this.sign = sign;
     }
 
-    public void calculate() {
+    public int calculate() {
         int result = 0;
         switch (sign) {
             case '+': 
@@ -37,14 +37,11 @@ public class Calculator {
                 result = num1 % num2;
                 break;
             case '^': 
-                result = 1;
-                for (int i = 0; i < num2; i++) {
-                    result *= num1;
-                }
+                result = (int) Math.pow(num1, num2);
                 break;
             default:
                 System.out.println("Неизвестная операция ");
         }
-        System.out.println(num1 + " " + sign + " " + num2 + " = " + result);
+        return result;
     }
 }

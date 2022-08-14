@@ -9,15 +9,13 @@ public class CalculatorTest {
         Calculator calc = new Calculator();
         String answer = "yes";
         while (answer.equals("yes")) {
-            System.out.print("Введите первое число: ");
-            calc.setNum1(sc.nextInt());
-            sc.nextLine();
-            System.out.print("Введите знак математической операции: ");
-            calc.setSign(sc.nextLine().charAt(0));
-            System.out.print("Введите второе число: ");
-            calc.setNum2(sc.nextInt());
-            calc.calculate();
-            sc.nextLine();
+            System.out.print("Введите математическое выражение отделяя числа от символа пробелом: ");
+            String str = sc.nextLine();
+            String[] strArray = str.split(" ");
+            calc.setNum1(Integer.parseInt(strArray[0]));
+            calc.setSign(strArray[1].charAt(0));
+            calc.setNum2(Integer.parseInt(strArray[2]));
+            System.out.printf("Результат: %s %s %s = %d\n", strArray[0], strArray[1], strArray[2], calc.calculate());
             do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]"); 
                 answer = sc.nextLine();
