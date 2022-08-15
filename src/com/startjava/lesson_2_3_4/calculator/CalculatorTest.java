@@ -10,8 +10,7 @@ public class CalculatorTest {
         String answer = "yes";
         while (answer.equals("yes")) {
             System.out.print("Введите математическое выражение отделяя числа от символа пробелом: ");
-            calc.splitArray(sc.nextLine());
-            System.out.printf("%d %c %d = %d\n", calc.getNum1(), calc.getSign(), calc.getNum2(), calc.calculate());
+            System.out.println(calc.calculate(sc.nextLine()));
             do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]"); 
                 answer = sc.nextLine();

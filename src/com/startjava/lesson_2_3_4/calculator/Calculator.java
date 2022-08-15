@@ -18,27 +18,11 @@ public class Calculator {
         this.sign = sign;
     }
 
-    public int getNum1() {
-        return num1;
-    }
-
-    public int getNum2() {
-        return num2;
-    }
-
-    public char getSign() {
-        return sign;
-    }
-
-    public void splitArray(String str) {
-        String[] strArray = str.split(" ");
-        setNum1(Integer.parseInt(strArray[0]));
-        setSign(strArray[1].charAt(0));
-        setNum2(Integer.parseInt(strArray[2]));
-    }
-
-    public int calculate() {
-        //int result = 0;
+    public int calculate(String str) {
+        String[] operands = str.split(" ");
+        setNum1(Integer.parseInt(operands[0]));
+        setSign(operands[1].charAt(0));
+        setNum2(Integer.parseInt(operands[2]));
         switch (sign) {
             case '+': return num1 + num2;
             case '-': return num1 - num2;
