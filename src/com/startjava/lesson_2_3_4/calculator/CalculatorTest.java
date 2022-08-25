@@ -10,14 +10,13 @@ public class CalculatorTest {
         do {
             if ("yes".equals(answer)) {
                 System.out.print("Введите математическое выражение отделяя числа от символа пробелом: ");
-                String srcStr = sc.nextLine();
+                String mathExpression = sc.nextLine();
                 try{
-                    if (Calculator.calculate(srcStr) < 0) throw new RuntimeException("Числа должны быть положительные");
-                    System.out.printf("%s = %d\n", srcStr, Calculator.calculate(srcStr));
+                    System.out.printf("%s = %d\n", mathExpression, Calculator.calculate(mathExpression));
                 } catch (NumberFormatException e) {
                     System.out.println("Введите целые числа");
-                } catch (RuntimeException e) {
-                    System.out.println(e);
+                } catch (RuntimeException ex) {
+                    System.out.println("Числа должны быть положительные");
                 }
             }
             System.out.println("Хотите продолжить вычисления? [yes/no]");
