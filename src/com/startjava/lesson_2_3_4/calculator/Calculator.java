@@ -2,7 +2,7 @@ package com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {
 
-    public static int calculate(String mathExpression) {
+    public static int calculate(String mathExpression) throws RuntimeException {
         String[] operands = mathExpression.split(" ");
         if (Integer.parseInt(operands[0]) < 0 || Integer.parseInt(operands[2]) < 0) throw new RuntimeException("Числа должны быть положительные");
         int num1 = Integer.parseInt(operands[0]);
