@@ -15,7 +15,7 @@ public class CalculatorTest {
                     System.out.printf("%s = %d\n", mathExpression, Calculator.calculate(mathExpression));
                 } catch (NumberFormatException e) {
                     System.out.println("Введите целые числа");
-                } catch (RuntimeException ex) {
+                } catch (IllegalArgumentException ex) {
                     System.out.println("Числа должны быть положительные");
                 }
             }
