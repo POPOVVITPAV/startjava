@@ -5,9 +5,8 @@ import java.util.Arrays;
 public class Player {
 
     private String name;
-    int[]  intArr = new int[10];
-    private int count = 0;
-
+    private int[] numArray = new int[10];
+    private int count;
 
     public Player(String name) {
         this.name = name;
@@ -17,21 +16,23 @@ public class Player {
         return name;
     }
 
-    public void getArrCopy() {
-        int[] intArrCopy = Arrays.copyOf(intArr, count);
-        for (int num : intArrCopy) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
+    public int[] copyArr() {
+        int[] arrCopy = Arrays.copyOf(numArray, count);
+        return arrCopy;
     }
 
-    public int writeInArr(int playerNum) {
-        intArr[count] = playerNum;
-        count++;
+    public int getCount() {
         return count;
     }
 
-    public void zeroingArray() {
-        Arrays.fill(intArr, count);
+    public void addNum(int num) {
+        numArray[count] = num;
+        count++;
     }
+
+    public void reset() {
+        Arrays.fill(numArray, 0, count, 0);
+        count = 0;
+    }
+
 }

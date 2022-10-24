@@ -18,28 +18,28 @@ public class GuessNumber {
     public void launch() {
         int targetNumber = (int) (Math.random() * 100 + 1);
         System.out.printf("Компьютер загадал число от 0 до 100 %d\n", targetNumber);
+        player1.reset();
+        player2.reset();
         while (true) {
-            if (isGuessed(player1.getName(), targetNumber, player1)) {
+            if (isGuessed(player1, targetNumber)) {
                 break;
             } 
-            if (isGuessed(player2.getName(), targetNumber, player2)) {
+            if (isGuessed(player2, targetNumber)) {
                 break;
             }
         }
-//        System.out.println(Arrays.toString(player1.getArrCopy()));
-//        System.out.println(Arrays.toString(player2.getArrCopy()));
         System.out.printf("Числа которые ввел %s ", player1.getName());
-        player1.getArrCopy();
+        printNum(player1);
         System.out.printf("Числа которые ввел %s ",  player2.getName());
-        player2.getArrCopy();
+        printNum(player2);
     }
 
-    private boolean isGuessed(String playerName, int targetNumber, Player player) {
-        System.out.printf("%s введи число от 0 до 100 :", playerName);
+    private boolean isGuessed(Player player, int targetNumber) {
+        System.out.printf("%s введи число от 0 до 100 :", player.getName());
         int playerNum =  scanner.nextInt();
-        int count = player.writeInArr(playerNum);
+        player.addNum(playerNum);
         if (targetNumber == playerNum) {
-            System.out.printf("Игрок %s угадал число %d с %d попытки\n", playerName, targetNumber, count);
+            System.out.printf("Игрок %s угадал число %d с %d попытки\n", player.getName(), targetNumber, player.getCount());
             return true;
         }
         if (targetNumber < playerNum) {
@@ -48,6 +48,12 @@ public class GuessNumber {
             System.out.printf("число %d меньше того, что загадал компьютер\n", playerNum);
         } 
         return false;
+    }
+    private void printNum(Player player ) {
+        for (int num : player.copyArr()) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
     }
 }
 
