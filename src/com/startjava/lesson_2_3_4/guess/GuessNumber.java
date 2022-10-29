@@ -1,19 +1,16 @@
 package com.startjava.lesson_2_3_4.guess;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class GuessNumber {
    
     private Player player1;
     private Player player2;
-    private  int targetNumber;
-    Scanner scanner;
+    private int targetNumber;
 
     public GuessNumber(Player player1, Player player2) {
         this.player1 = player1;
         this.player2 = player2;
-        scanner = new Scanner(System.in);
     }
 
     public void launch() {
@@ -31,12 +28,13 @@ public class GuessNumber {
     }
 
     private boolean isGuessed(Player player) {
+        Scanner scanner = new Scanner(System.in);
         System.out.printf("%s введи число от 0 до 100 :", player.getName());
         int playerNum =  scanner.nextInt();
         player.addNum(playerNum);
         if (targetNumber == playerNum) {
-            System.out.printf("Игрок %s угадал число %d с %d попытки\n", player.getName(), targetNumber,
-            player.getCount());
+            System.out.printf("Игрок %s угадал число %d с %d попытки\n",
+                    player.getName(), targetNumber, player.getCount());
             return true;
         }
         if (targetNumber < playerNum) {

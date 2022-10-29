@@ -16,7 +16,7 @@ public class Player {
         return name;
     }
 
-    public int[]  getEnteredNums() {
+    public int[] getEnteredNums() {
         return Arrays.copyOf(enteredNums, count);
     }
 
