@@ -1,9 +1,8 @@
 package com.startjava.graduation.bookshelf;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class Booksheда {
+public class Bookshelf {
 
     private int  booksOnShelves;
     Book[] books = new Book[10];
@@ -15,10 +14,9 @@ public class Booksheда {
         }
     }
 
-    void findBook() {
+    void findBook(Book b) {
         for (int i = 0; i < booksOnShelves; i++) {
-            if () {
-
+            if (books[i] == b) {
             }
         }
     }
