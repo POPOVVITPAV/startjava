@@ -7,22 +7,29 @@ public class Bookshelf {
     private int  booksOnShelves;
     Book[] books = new Book[10];
 
-    void addBook(Book b) {
+    void addBook(Book book) {
         if (booksOnShelves < books.length) {
-            books[booksOnShelves] = b;
+            books[booksOnShelves] = book;
             booksOnShelves++;
         }
     }
 
-    void findBook(Book b) {
+    int findBook(Book book) {
         for (int i = 0; i < booksOnShelves; i++) {
-            if (books[i] == b) {
+            if (books[i].equals(book)) {
+                return i;
             }
         }
+        return 0;
     }
 
-    void deleteBook() {
-
+    void deleteBook(Book book) {
+        for (int i = 0; i < booksOnShelves; i++) {
+            if (books[i].equals(book)) {
+                books[i] = books[booksOnShelves - 1];
+                books[booksOnShelves - 1] = null;
+            }
+        }
     }
 
     Book[] getAllBooks() {
