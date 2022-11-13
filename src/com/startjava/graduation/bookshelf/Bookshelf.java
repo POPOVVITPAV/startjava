@@ -1,6 +1,7 @@
 package com.startjava.graduation.bookshelf;
 
 import java.util.Arrays;
+import java.util.Locale;
 
 public class Bookshelf {
 
@@ -14,20 +15,23 @@ public class Bookshelf {
         }
     }
 
-    int findBook(Book book) {
+    int findBook(String search) {
         for (int i = 0; i < booksOnShelves; i++) {
-            if (books[i].equals(book)) {
-                return i;
+            if (books[i] != null && books[i].getTitle() != null &&
+                    books[i].getTitle().toLowerCase().equals(search.toLowerCase())) {
+                return  i+1;
             }
         }
         return 0;
     }
 
-    void deleteBook(Book book) {
+    void deleteBook(String dellBook) {
         for (int i = 0; i < booksOnShelves; i++) {
-            if (books[i].equals(book)) {
+            if (books[i] != null && books[i].getTitle() != null &&
+                    books[i].getTitle().toLowerCase().equals(dellBook.toLowerCase())) {
                 books[i] = books[booksOnShelves - 1];
                 books[booksOnShelves - 1] = null;
+                booksOnShelves--;
             }
         }
     }

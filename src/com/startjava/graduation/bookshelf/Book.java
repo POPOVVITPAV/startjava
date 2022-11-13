@@ -10,6 +10,10 @@ public class Book {
         this.title = title;
         this.yearOfPublication = yearOfPublication;
     }
+    @Override
+    public String toString() {
+        return String.format("%s, %s, %d", this.author, this.title, this.yearOfPublication);
+    }
 
     public String getAuthor() {
         return author;
